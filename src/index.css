@@ -1,10 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* reset básico para evitar margens que "quebram" o layout */
+/* reset básico */
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #000; /* garante fundo preto default */
 }

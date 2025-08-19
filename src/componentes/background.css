@@ -1,22 +1,26 @@
+/* src/componentes/background.css */
 .bg-wrap {
-    position: relative;
-    width: 100%;
-    min-height: 5200px;
-    background-color: #000; 
-    overflow: hidden;
-  }
-  .white-box {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1; 
-  }
-  .white-box.box-1 {
-    top: 867px;
-    height: 1037px;
-  }
-  .white-box.box-2 {
-    top: 4182px;
-    height: 768px;
-  }
+  position: relative;
+  width: 100%;
+  min-height: 5200px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.white-box {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.white-box.box-1 {
+  top: 867px;
+  height: 1037px;
+}
+
+.white-box.box-2 {
+  top: 4182px;
+  height: 768px;
+}
