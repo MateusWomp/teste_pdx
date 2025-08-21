@@ -1,8 +1,13 @@
-// src/componentes/Header.tsx
 import React, { useState } from "react";
 import "./Header.css"; // CSS para header fixo
 
-const navItems = ["SERVIÇOS", "ESTÚDIOS", "SOBRE A PDX", "PORTFÓLIO", "CONTATO"];
+const navItems = [
+  { label: "SERVIÇOS", href: "#services" },
+  { label: "ESTÚDIOS", href: "#studios" },
+  { label: "SOBRE A PDX", href: "#about" },
+  { label: "PORTFÓLIO", href: "#portfolio" },
+  { label: "CONTATO", href: "#contact" },
+];
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -15,7 +20,7 @@ const Header: React.FC = () => {
           {/* Logo (já preparado para imagem real) */}
           <div className="logo">
             <img
-              src="/assets/1.logotipoPDX.png"
+              src="/assets/logo-pdx.png"
               alt="PDX Logo"
               className="h-10 w-auto"
             />
@@ -24,19 +29,15 @@ const Header: React.FC = () => {
           {/* Menu centralizado */}
           <nav className="hidden lg:flex nav-center">
             {navItems.map((item) => (
-              <a key={item} href="#" onClick={(e) => e.preventDefault()}>
-                {item}
+              <a key={item.label} href={item.href}>
+                {item.label}
               </a>
             ))}
           </nav>
 
           {/* Botão "ÁREA DO CLIENTE" (igual ao CONHEÇA AGORA) */}
           <div className="hidden lg:flex">
-            <a
-              href="#"
-              className="btn-cliente"
-              onClick={(e) => e.preventDefault()}
-            >
+            <a href="#cliente" className="btn-cliente">
               ÁREA DO CLIENTE
             </a>
           </div>
@@ -78,19 +79,18 @@ const Header: React.FC = () => {
           `}
         >
           <nav className="flex flex-col gap-3 text-sm text-white">
-            {[...navItems, "ÁREA DO CLIENTE"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="py-1 border-b border-white/10 last:border-b-0"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpen(false);
-                }}
-              >
-                {item}
-              </a>
-            ))}
+            {[...navItems, { label: "ÁREA DO CLIENTE", href: "#cliente" }].map(
+              (item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="py-1 border-b border-white/10 last:border-b-0"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
         </div>
       </div>

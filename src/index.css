@@ -1,9 +1,14 @@
-@import "tailwindcss";
-
-/* reset básico */
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #000; /* garante fundo preto default */
+@import "tailwindcss"; 
+/* reset básico */ 
+html, body, #root 
+{ 
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+  background-color: #000; 
+  /* garante fundo preto default */ 
+} 
+/* rolagem suave */ 
+html { scroll-behavior: 
+  smooth; 
 }
