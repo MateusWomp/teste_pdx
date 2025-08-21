@@ -3,6 +3,7 @@ import React from "react";
 import Background from "../../componentes/Background";
 import Hero from "../../componentes/Hero";
 import ServicesSection from "../../componentes/ServicesSection";
+import LogoSection from "../../componentes/LogoSection"; // Novo import
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
       <main className="relative z-20">
         <Hero />
         <ServicesSection sectionMarginTop="0px" />
+        <LogoSection /> {/* Adicionado aqui */}
       </main>
     </div>
   );
