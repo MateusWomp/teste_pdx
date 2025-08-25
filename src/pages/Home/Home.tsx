@@ -5,6 +5,7 @@ import Hero from "../../componentes/Hero";
 import ServicesSection from "../../componentes/ServicesSection";
 import LogoSection from "../../componentes/LogoSection";
 import StudioSection from "../../componentes/StudioSection";
+import AboutSection from "../../componentes/AboutSection";
 
 const Home: React.FC = () => {
   return (
@@ -14,7 +15,8 @@ const Home: React.FC = () => {
         <Hero />
         <ServicesSection sectionMarginTop="0px" />
         <LogoSection />
-        <StudioSection style={{ marginTop: "200px" }} /> {/* Ajustei para alinhar com o fim da primeira faixa branca (671px + 1037px) */}
+        <StudioSection style={{ marginTop: "200px" }} />
+        <AboutSection /> {/* Adiciona a seção "SOBRE A PDX" logo abaixo do vídeo */}
       </main>
     </div>
   );
