@@ -1,32 +1,32 @@
 // src/componentes/AboutSection.tsx
 import React from "react";
+import './AboutSection.css';
 
 interface AboutSectionProps {
-  sectionWidth?: string;   // Controle da largura da seção (padrão: "1501px")
-  sectionHeight?: string;  // Controle da altura da seção (padrão: "956px")
-  logoWidth?: string;      // Controle da largura da logo PDX (padrão: "339px")
-  logoHeight?: string;     // Controle da altura da logo PDX (padrão: "128px")
-  logoLeft?: string;       // Controle da posição horizontal da logo PDX (padrão: "100px")
-  logoTop?: string;        // Controle da posição vertical da logo PDX (padrão: "200px")
-  bigXWidth?: string;      // Controle da largura do X grande (padrão: "888px")
-  bigXHeight?: string;     // Controle da altura do X grande (padrão: "956px")
-  bigXRight?: string;      // Controle da posição horizontal do X grande (padrão: "-100px" para overflow)
-  bigXtop?: string;        // Controle da posição vertical do X grande (padrão: "0px")
-  titleWidth?: string;     // Controle da largura do título (padrão: "503px")
-  titleHeight?: string;    // Controle da altura do título (padrão: "425px")
-  titleLeft?: string;      // Controle da posição horizontal do título (padrão: "150px")
-  titleTop?: string;       // Controle da posição vertical do título (padrão: "100px")
-  textWidth?: string;      // Controle da largura do texto (padrão: "543px")
-  textHeight?: string;     // Controle da altura do texto (padrão: "95px")
-  textLeft?: string;       // Controle da posição horizontal do texto (padrão: "150px")
-  textTop?: string;        // Controle da posição vertical do texto (padrão: "550px")
+  sectionWidth?: string;   // Controle da largura da seção 
+  sectionHeight?: string;  // Controle da altura da seção 
+  logoWidth?: string;      // Controle da largura da logo PDX 
+  logoHeight?: string;     // Controle da altura da logo PDX 
+  logoLeft?: string;       // Controle da posição horizontal da logo PDX 
+  logoTop?: string;        // Controle da posição vertical da logo PDX 
+  bigXWidth?: string;      // Controle da largura do X grande 
+  bigXHeight?: string;     // Controle da altura do X grande 
+  bigXRight?: string;      // Controle da posição horizontal do X grande 
+  bigXtop?: string;        // Controle da posição vertical do X grande 
+  titleWidth?: string;     // Controle da largura do título 
+  titleHeight?: string;    // Controle da altura do título 
+  titleLeft?: string;      // Controle da posição horizontal do título 
+  titleTop?: string;       // Controle da posição vertical do título 
+  textWidth?: string;      // Controle da largura do texto 
+  textLeft?: string;       // Controle da posição horizontal do texto 
+  textTop?: string;        // Controle da posição vertical do texto 
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({
   sectionWidth = "1501px",
   sectionHeight = "956px",
-  logoWidth = "339px",     // Voltado ao valor original
-  logoHeight = "128px",    // Corrigido para minúsculo
+  logoWidth = "339px",
+  logoHeight = "128px",
   logoLeft = "100px",
   logoTop = "200px",
   bigXWidth = "888px",
@@ -34,11 +34,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   bigXRight = "-100px",
   bigXtop = "0px",
   titleWidth = "503px",
-  titleHeight = "425px",   // Voltado ao valor original
-  titleLeft = "150px",     // Voltado ao valor original
-  titleTop = "100px",
-  textWidth = "543px",
-  textHeight = "150px",    // Aumentado para acomodar texto
+  titleHeight = "500px",
+  titleLeft = "95px",
+  titleTop = "380px",
+  textWidth = "643px",
   textLeft = "100px",
   textTop = "750px",
 }) => {
@@ -80,15 +79,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({
       />
       {/* Título à esquerda */}
       <div
-        className="absolute text-white" // Removido text-center para controle manual
+        className="absolute text-white"
         style={{
           left: titleLeft,
           top: titleTop,
           width: titleWidth,
           height: titleHeight,
           overflow: "hidden",
-          paddingLeft: "50%", // Centralização manual
-          transform: "translateX(-50%)", // Corrige deslocamento
         }}
       >
         <h2 className="text-5xl font-extrabold leading-tight">
@@ -101,21 +98,20 @@ const AboutSection: React.FC<AboutSectionProps> = ({
       </div>
       {/* Texto abaixo do título */}
       <div
-        className="absolute text-white text-left"
+        className="absolute text-white text-left text-content" // Adicionada classe para CSS
         style={{
           left: textLeft,
           top: textTop,
           width: textWidth,
-          height: textHeight,
           overflow: "auto",
         }}
       >
-        <p className="text-base leading-relaxed">
-          conectamos marcas e pessoas através de estratégias inovadoras<br />
+        <p className="leading-relaxed">
+          <strong>conectamos marcas e pessoas através de estratégias inovadoras<br />
           e eficazes. Seja por meio de marketing digital, marketing de conteúdo<br />
           ou estratégias offline, entendemos que o marketing é a chave para o<br />
           sucesso do negócio que queira se destacar e crescer no mercado<br />
-          competitivo de hoje.
+          competitivo de hoje.</strong>
         </p>
       </div>
     </section>

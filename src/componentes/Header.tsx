@@ -1,3 +1,4 @@
+// src/componentes/Header.tsx
 import React, { useState } from "react";
 import "./Header.css"; // CSS para header fixo
 

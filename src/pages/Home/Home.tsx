@@ -6,6 +6,7 @@ import ServicesSection from "../../componentes/ServicesSection";
 import LogoSection from "../../componentes/LogoSection";
 import StudioSection from "../../componentes/StudioSection";
 import AboutSection from "../../componentes/AboutSection";
+import PortfolioSection from "componentes/PortfolioSection";
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
         <LogoSection />
         <StudioSection style={{ marginTop: "200px" }} />
         <AboutSection /> {/* Adiciona a seção "SOBRE A PDX" logo abaixo do vídeo */}
+        <PortfolioSection marginTop="170px"/>
       </main>
     </div>
   );
