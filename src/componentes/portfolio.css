@@ -1,0 +1,30 @@
+/* src/componentes/portfolio.css */
+
+.portfolio-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+  justify-items: center; /* cada coluna centraliza o card */
+}
+
+/* >= 640px => 2 colunas */
+@media (min-width: 640px) {
+  .portfolio-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* >= 1200px => 2 colunas (mude pra 4 se quiser) */
+@media (min-width: 1200px) {
+  .portfolio-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    /* se quiser 4 colunas, substitua por: repeat(4, 1fr) */
+  }
+}
+
+.portfolio-grid-item {
+  display: flex;
+  justify-content: center; /* centraliza o card dentro da coluna */
+  width: 100%;
+}
