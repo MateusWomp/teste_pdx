@@ -1,0 +1,13 @@
+/* src/componentes/AboutSection.css */
+.text-content {
+  font-size: 18px; /* Tamanho inicial, ajustável */
+  height: auto; /* Altura controlada por CSS, ajustável */
+}
+
+.text-content p {
+  margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+.text-content strong {
+  font-weight: bold; /* Garante que o negrito seja aplicado */
+}
