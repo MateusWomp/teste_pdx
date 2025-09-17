@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         <LogoSection />
         <StudioSection style={{ marginTop: "200px" }} />
         <AboutSection /> 
-        <PortfolioSection marginTop="10%"/>
+        <PortfolioSection/>
         <ContactSection/>
         <Footer/>
       </main>
