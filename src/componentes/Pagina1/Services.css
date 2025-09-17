@@ -1,0 +1,246 @@
+/* src/componentes/Pagina1/Services.css */
+.services-section {
+  position: relative;
+  z-index: 30;
+  background-color: transparent;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;       
+  align-items: flex-start;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: visible; 
+}
+.service-card {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: black;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  display: block;
+}
+.service-card img.bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+.service-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.2));
+  mix-blend-mode: normal;
+}
+.service-title {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.service-desc {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+.service-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service-arrow img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+@media(max-width: 360px){
+.services-section {
+    padding-top: 19%;
+    padding-bottom: -10%;
+  }
+
+  .services-grid {
+    width: 95%;
+    max-width: 95%;
+    gap: 2.076124567474048442906574394463667820069%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 55.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 9%;
+    font-size: 60%; 
+  }
+
+  .service-desc {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 24%;
+    font-size: 42%; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
+@media (min-width: 361px) and (max-width: 480px) {
+  .services-section {
+    padding-top: 23%;
+    padding-bottom: -10%;
+  }
+
+  .services-grid {
+    width: 95%;
+    max-width: 95%;
+    gap: 2.076124567474048442906574394463667820069%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 55.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 9%;
+    font-size: 60%; 
+  }
+
+  .service-desc {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 24%;
+    font-size: 42%; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
+
+/* -------------------- VERY SMALL SCREENS (até 420px) — comportamento extra */
+@media (max-width: 420px) {
+  .services-grid {
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 2.076124567474048442906574394463667820069%;
+  }
+
+  /* opcional: se quiser cards um pouco maiores ao arrastar, poderia mudar algo aqui */
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .services-grid {
+    width: 90%;
+    max-width: 90%;
+    gap: 2.076124567474048442906574394463667820069%;
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 135.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 9%;
+    font-size: 1.953125000000000000000000000000000000000vw;
+  }
+
+  .service-desc {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 24%;
+    font-size: 1.367187500000000000000000000000000000000vw; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
+@media (min-width: 1025px) {
+  .services-section {
+    padding-top: 104px;
+    padding-bottom: 64px;
+  }
+
+  .services-grid {
+    width: 100%;
+    max-width: 1156px;
+    gap: 2.076124567474048442906574394463667820069%;
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 45.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 9%;
+    font-size: 20px;
+  }
+
+  .service-desc {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 24%;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}

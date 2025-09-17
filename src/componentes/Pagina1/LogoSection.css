@@ -1,0 +1,81 @@
+/* src/componentes/Pagina1/LogoSection.css */
+
+/* ====== BASE (desktop) - NÃO ALTERAR ====== */
+.logo-section {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 200%;
+  transform: translateY(-50%);
+  z-index: 50;
+  overflow: hidden;
+  --logo-item-height: 5.2vw;
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-item {
+  height: var(--logo-item-height);
+  width: auto;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 360px) {
+  .logo-section {
+    height: 9.5vh;
+    top: 84%;             /* deslocamento mais baixo para alinhar com seções reduzidas */
+    transform: translateY(-50%);
+    overflow: hidden;
+    z-index: 50;
+  }
+
+  .logo-item {
+    --logo-item-height: 3.8vh;  /* ícones um pouco menores para caber melhor */
+    margin-right: 8%;
+  }
+}
+
+/* ----- MOBILE (361px a 480px) - regra original adaptada para intervalo ----- */
+@media (min-width: 361px) and (max-width: 480px) {
+  .logo-section {
+    height: 10.5vh;
+    top: 90%;
+  }
+  .logo-item {
+    --logo-item-height: 4vh;
+    margin-right: 8%;
+  }
+}
+
+/* ----- TABLET (769px a 1024px) ----- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-section {
+    height: 13.5vh;
+  }
+  .logo-item {
+    --logo-item-height: 7vh;
+    margin-right: 4%;
+  }
+}
+
+/* ----- DESKTOP (>=1025px) ----- */
+@media (min-width: 1025px) {
+  .logo-section {
+    height: 14.54%;
+  }
+  .logo-item {
+    --logo-item-height: 9.4vh;
+    margin-right: 3.33%;
+  }
+}

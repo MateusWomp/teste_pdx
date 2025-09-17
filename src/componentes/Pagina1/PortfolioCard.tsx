@@ -1,53 +1,49 @@
 // src/componentes/PortfolioCard.tsx
 import React from "react";
+import "./portfolio.css";
 
 interface PortfolioCardProps {
   title: string;
   imgSrc: string;
   width?: string; 
   height?: string; 
-  titleTop?: string; 
-  borderWidth?: string; 
-  className?: string; 
-  style?: React.CSSProperties; 
-  fontSize?: string; 
+  borderWidth?: string;
+  style?: React.CSSProperties;
 }
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({
   title,
   imgSrc,
-  width = "100%",
-  height = "auto",
-  titleTop = "70%", 
-  borderWidth = "4px", 
-  className = "",
+  width = "90%",
+  height = "64%",
+  borderWidth = "4px",
   style = {},
-  fontSize = "1.5rem",
 }) => {
-  // Quebra de linha manual para os títulos específicos
-  const formattedTitle = title === "MÉTRICAS E RESULTADOS" 
-    ? "MÉTRICAS\nE RESULTADOS"
-    : title === "CAMPANHAS PUBLICITÁRIAS" 
-    ? "CAMPANHAS\nPUBLICITÁRIAS"
-    : title;
+  const formattedTitle =
+    title === "MÉTRICAS E RESULTADOS"
+      ? "MÉTRICAS\nE RESULTADOS"
+      : title === "CAMPANHAS PUBLICITÁRIAS"
+      ? "CAMPANHAS\nPUBLICITÁRIAS"
+      : title;
+
+  const vars = {
+    "--card-width": width,
+    "--card-aspect": height,
+    "--card-border-width": borderWidth,
+  } as React.CSSProperties;
 
   return (
     <figure
-      className={`relative rounded-md overflow-hidden bg-black ${className} hover:scale-105 transition-transform duration-300`} // Adicionado o efeito hover
-      style={{ ...style, width, height, border: `${borderWidth} solid white` }}
+      className="portfolio-card"
+      style={{
+        ...vars,
+        ...style,
+      }}
       aria-label={title}
     >
-      <img
-        src={imgSrc}
-        alt={title}
-        className="absolute inset-0 w-full h-full object-cover filter grayscale"
-        draggable={false}
-      />
-      <figcaption
-        className="absolute left-4 right-4 text-white"
-        style={{ bottom: titleTop }}
-      >
-        <h3 className="text-lg font-bold leading-snug" style={{ fontSize }}>{formattedTitle}</h3>
+      <img src={imgSrc} alt={title} draggable={false} />
+      <figcaption>
+        <h3>{formattedTitle}</h3>
       </figcaption>
     </figure>
   );

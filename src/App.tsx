@@ -1,6 +1,5 @@
 // src/App.tsx
-import React from "react";
-import Header from "./componentes/Header";
+import Header from "componentes/Pagina1/Header";
 import Home from "./pages/Home/Home";
 
 function App() {

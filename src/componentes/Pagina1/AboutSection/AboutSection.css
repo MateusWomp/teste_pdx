@@ -1,13 +1,443 @@
 /* src/componentes/AboutSection.css */
-.text-content {
-  font-size: 18px; /* Tamanho inicial, ajustável */
-  height: auto; /* Altura controlada por CSS, ajustável */
+.about-section {
+  position: relative;
+  background-color: black;
+  z-index: 30;
+  overflow: hidden; /* importante: recorta qualquer parte da imagem que saia da seção */
+  margin-top: 50px;
 }
 
-.text-content p {
-  margin: 0; /* Remove margens padrão do parágrafo */
+.about-logo {
+  position: absolute;
+  object-fit: contain;
+}
+.about-big-x {
+  position: absolute;
+  object-fit: cover;
+  /* Defaults visuais (inline styles do componente podem sobrescrever) */
+  top: 0;
+  right: 0;
+  width: 888px;
+  height: auto;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+/* define valor padrão (desktop) */
+.about-section { --big-x-visible: 38vw; }
+
+/* wrapper do conteúdo (uma vez) */
+.about-content { width: calc(100% - var(--big-x-visible)); min-width:0; box-sizing:border-box; }
+
+/* mantenha o X colado na borda direita (uma vez) */
+.about-big-x { right: 0; }
+
+/* Texto / títulos */
+.about-title {
+  position: absolute;
+  color: white;
+  overflow: hidden;
 }
 
-.text-content strong {
-  font-weight: bold; /* Garante que o negrito seja aplicado */
+.about-title h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.about-text {
+  position: absolute;
+  color: white;
+  text-align: left;
+  overflow: auto;
+  font-size: 18px;
+}
+
+.about-text p {
+  line-height: 1.625;
+  margin: 0;
+}
+
+.about-text strong {
+  font-weight: bold;
+}
+
+@media (max-width: 360px) {
+  /* garantir que a seção fique acima das faixas de background */
+  #about.about-section,
+  .about-section {
+    width: 72vw !important;
+    height: auto !important;
+    min-height: 35vh !important;
+    overflow: visible !important; /* permite rolagem vertical normal */
+    position: relative !important;
+    z-index: 40 !important; /* > white-box no mobile */
+    background-color: black !important;
+  }
+.about-section { --big-x-visible: 50vw; } 
+  .about-logo {
+    left: 4vw !important;
+    top: 1vh !important;
+    width: 30vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -8;
+    top: -3vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 8vh !important;
+    width: 54vw !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 6vw !important;
+    line-height: 1.02 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 4vw !important;
+    top: 25vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.55 !important; }
+}
+
+/* MOBILE (361px - 480px) */
+@media (min-width: 361px) and (max-width: 480px) {
+  #about.about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+  }
+
+  .about-logo {
+    left: 4vw !important;
+    top: 25vh !important;
+    width: 28vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -10vw !important;
+    top: 20vh !important;
+    width: 70vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 33vh !important;
+    width: 52vw !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 5.5vw !important;
+    line-height: 1.04 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 4vw !important;
+    top: 52vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.6 !important; }
+}
+
+/* PHABLET / SMALL (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #about.about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+  }
+
+  .about-logo {
+    left: 5.5vw !important;
+    top: 6vh !important;
+    width: 22vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -12vw !important;
+    top: 0vh !important;
+    width: 60vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 5.5vw !important;
+    top: 14vh !important;
+    width: 46vw !important;
+    height: auto !important;
+  }
+  .about-title h2 {
+    font-size: 5.2vw !important;
+    line-height: 1.06 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 5.5vw !important;
+    top: 52vh !important;
+    width: 46vw !important;
+    height: auto !important;
+    font-size: 1.6vw !important;
+  }
+  .about-text p { line-height: 1.6 !important; }
+}
+
+/* TABLET (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #about.about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+  }
+
+  .about-logo {
+    left: 5.5vw !important;
+    top: 6vh !important;
+    width: 22vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -12vw !important;
+    top: 0vh !important;
+    width: 60vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 5.5vw !important;
+    top: 14vh !important;
+    width: 46vw !important;
+    height: auto !important;
+  }
+  .about-title h2 {
+    font-size: 5.2vw !important;
+    line-height: 1.06 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 5.5vw !important;
+    top: 52vh !important;
+    width: 46vw !important;
+    height: auto !important;
+    font-size: 1.6vw !important;
+  }
+  .about-text p { line-height: 1.6 !important; }
+}
+
+@media (min-width: 410px) and (max-width: 412px){
+  #about.about-section,
+  .about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 35vh !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 40 !important;
+    background-color: black !important;
+  }
+
+  .about-logo {
+    left: 4vw !important;
+    top: 8vh !important;
+    width: 30vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -8vw !important;
+    top: 5vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 15vh !important;
+    width: 54vw !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 6vw !important;
+    line-height: 1.02 !important;
+  }
+  .about-text {
+    left: 4vw !important;
+    top: 30vh !important;
+    width: 68vw !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.55 !important; }
+}
+
+@media (min-width: 413px) and (max-width: 415px){
+  #about.about-section,
+  .about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 35vh !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 40 !important;
+    background-color: black !important;
+  }
+
+  .about-logo {
+    left: 4vw !important;
+    top: 8vh !important;
+    width: 30vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -8vw !important;
+    top: 5vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 15vh !important;
+    width: 54vw !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 6vw !important;
+    line-height: 1.02 !important;
+  }
+  .about-text {
+    left: 4vw !important;
+    top: 30vh !important;
+    width: 68vw !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.55 !important; }
+}
+
+@media (min-width: 389px) and (max-width: 391px){
+  #about.about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 40vh !important;
+    overflow: visible !important;
+  }
+
+  .about-logo {
+    left: 4vw !important;
+    top: 8vh !important;
+    width: 28vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -10vw !important;
+    top: 5vh !important;
+    width: 70vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 15vh !important;
+    width: 52vw !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 5.5vw !important;
+    line-height: 1.04 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 4vw !important;
+    top: 30vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.6 !important; }
+}
+
+@media (min-width: 429px) and (max-width: 431px){
+  #about.about-section,
+  .about-section {
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 35vh !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 40 !important;
+    background-color: black !important;
+  }
+
+  .about-logo {
+    left: 4vw !important;
+    top: 8vh !important;
+    width: 30vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    right: -8vw !important;
+    top: 5vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 15vh !important;
+    width: 54vw !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 6vw !important;
+    line-height: 1.02 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 4vw !important;
+    top: 30vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.55 !important; }
 }

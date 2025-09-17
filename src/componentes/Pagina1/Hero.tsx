@@ -1,4 +1,41 @@
-// src/componentes/Hero.tsx 
-import React from "react"; 
-/** * Hero posicionado no fluxo normal (mt = 152px conforme Figma). * Mantive os posicionamentos internos absolutos (como você tinha) para ficar fiel ao Figma. * Atenção: verifique se a imagem do banner está em public/assets/banner.png (sem espaços). */ 
-const Hero: React.FC = () => { return ( <section className="relative z-20 mx-auto mt-[152px] w-[1104px] h-[519px]" aria-label="Hero principal" > {/* Container posicionável (tudo dentro dele usa posições relativas ao container) */} <div className="relative w-full h-full"> {/* ----- Left banner (posição = container left/top) ----- */} <div style={{ position: "absolute", left: 0, top: 0, width: "454px", height: "482px", }} className="flex items-center justify-center" > {/* troque o src para o arquivo real em public/assets (sem espaços/acentos) */} <div className="w-full h-full bg-gray-100/20 rounded-md flex items-center justify-center"> <img src="/assets/banner.png" alt="Banner" className="w-full h-full object-cover rounded-md" draggable={false} /> </div> </div> {/* ----- Right content: título (left = 528px, top = 25px) ----- */} <div style={{ position: "absolute", left: "528px", top: "25px", width: "576px", height: "231px", }} > <h2 className="font-extrabold leading-[1.05] text-white" style={{ fontSize: "56px", lineHeight: 1.02 }} > TENHA A MELHOR <br /> ESTRATÉGIA DE <br /> CONTEÚDO </h2> </div> {/* ----- Right paragraph: (left = 528px, top = 288px, W = 510 H = 72) ----- */} <div style={{ position: "absolute", left: "528px", top: "288px", width: "510px", height: "72px", }} > <p className="text-white" style={{ fontSize: "16px", lineHeight: "1.4" }}> Com a orientação dos nossos profissionais os perfis do seu negócio terão consistência na interação com seu público alvo. </p> </div> {/* ----- Botão: (left = 518px, top = 382px) ----- */} <div style={{ position: "absolute", left: "518px", top: "382px", }} > <a href="#" className="inline-flex items-center px-6 py-3 border border-white rounded text-sm font-medium text-white hover:bg-white hover:text-black transition-colors" onClick={(e) => e.preventDefault()} > CONHEÇA AGORA </a> </div> </div> </section> ); }; export default Hero;
+// src/componentes/Pagina1/Hero.tsx
+import React from "react";
+import "./Hero.css";
+
+const Hero: React.FC = () => {
+  return (
+    <section className="hero-wrapper" aria-label="Hero principal">
+      <div className="hero-inner">
+        <div className="hero-banner">
+          <div className="hero-banner-inner">
+            <img
+              src="/assets/banner.png"
+              alt="Banner"
+              draggable={false}
+            />
+          </div>
+        </div>
+        <div className="hero-title">
+          <h2>
+            TENHA A MELHOR <br />
+            ESTRATÉGIA DE <br />
+            CONTEÚDO
+          </h2>
+        </div>
+        <div className="hero-text">
+          <p>
+            Com a orientação dos nossos profissionais os perfis do seu negócio
+            terão consistência na interação com seu público alvo.
+          </p>
+        </div>
+        <div className="hero-button">
+          <a href="#" onClick={(e) => e.preventDefault()}>
+            CONHEÇA AGORA
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

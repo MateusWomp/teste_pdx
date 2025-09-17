@@ -8,7 +8,7 @@ import StudioSection from "../../componentes/Pagina1/StudioSection";
 import AboutSection from "componentes/Pagina1/AboutSection/AboutSection";
 import PortfolioSection from "componentes/Pagina1/PortfolioSection";
 import ContactSection from "componentes/Pagina1/ContactSection";
-import Footer from "componentes/Footer";
+import Footer from "componentes/Pagina1/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         <LogoSection />
         <StudioSection style={{ marginTop: "200px" }} />
         <AboutSection /> 
-        <PortfolioSection marginTop="170px"/>
+        <PortfolioSection marginTop="10%"/>
         <ContactSection/>
         <Footer/>
       </main>

@@ -1,23 +1,449 @@
-/* src/componentes/background.css */
+/* src/componentes/background.css*/
 .bg-wrap {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 5200px;
+  width: 100vw;           /* sempre igual à viewport para evitar overflow */
+  max-width: 100vw;
+  min-height: 708%;       /* valor grande por padrão (mantive a lógica original) */
   background-color: #000;
-  overflow: hidden;
-  z-index: 0;
+  overflow: hidden;       /* evita que conteúdo do bg gere scroll horizontal */
+  z-index: -1;            /* fundo por padrão */
   pointer-events: none;
+  box-sizing: border-box;
 }
 
+/* Faixas brancas */
 .white-box {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* centraliza a faixa na viewport */
+  width: 100vw;                 /* largura igual à viewport */
+  max-width: 100vw;
   background-color: #fff;
-  z-index: 1;
+  z-index: 1;                   /* acima do bg-wrap */
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-sizing: border-box;
 }
 
-.white-box.box-1 { top: 671px; height: 1037px; } /* Mantido como está */
-.white-box.box-2 { top: 4182px; height: 768px; }
+/* Valores base (percentuais originais convertidos para uma posição segura) */
+.white-box.box-1 {
+  top: 15.961538%;
+  height: 21.942308%;
+}
+
+.white-box.box-2 {
+  top: 82.523077%;
+  height: 14.769231%;
+}
+@media (max-width: 360px) {
+  .bg-wrap {
+    top: 0 !important;
+    min-height: 210vh !important; /* suficiente para rolar até a 2ª faixa */
+    overflow: visible !important;  /* permitir rolagem vertical do documento */
+    z-index: 0 !important;         /* deixar no fundo, >=0 evita problemas em stacking contexts */
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    backface-visibility: hidden;
+    transform: translate(-50%, 0); /* manter centralizado */
+  }
+
+  .white-box.box-1 {
+    top: 56vh !important;
+    height: 50vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 195.3vh !important;
+    height: 29vh !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
+}
+
+/* -----------------------
+   MOBILE (361px - 480px)
+   ----------------------- */
+@media (min-width: 361px) and (max-width: 480px) {
+  .bg-wrap {
+    top: 0 !important;
+    min-height: 220vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    backface-visibility: hidden;
+    transform: translate(-50%, 0);
+  }
+
+  .white-box.box-1 {
+    top: 60vh !important;
+    height: 56vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 224vh !important;
+    height: 30vh !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
+}
+
+/* -----------------------
+   PHABLET / SMALL (481px - 768px)
+   ----------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .bg-wrap {
+    top: 0 !important;
+    min-height: 200vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 0);
+  }
+
+  .white-box.box-1 {
+    top: 48vh !important;
+    height: 26vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 140vh !important;
+    height: 28vh !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
+}
+
+/* -----------------------
+   TABLET (769px - 1024px)
+   ----------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bg-wrap {
+    top: 0 !important;
+    min-height: 180vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 0);
+  }
+
+  .white-box.box-1 {
+    top: 44vh !important;
+    height: 22vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 120vh !important;
+    height: 24vh !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
+}
+
+/* -----------------------
+   CASOS ESPECÍFICOS (410 - 412)
+   ----------------------- */
+@media (min-width: 410px) and (max-width: 412px) {
+  .bg-wrap {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-height: 230vh !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+    z-index: 0 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+
+  .white-box {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    background-color: #fff !important;
+    z-index: 5 !important;
+    backface-visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .white-box.box-1 {
+    top: 55vh !important;
+    height: 45vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 181vh !important;
+    height: 32vh !important;
+  }
+
+  .logo-section,
+  .hero-wrapper,
+  .services-section,
+  .studio-section,
+  .about-section,
+  .portfolio-section,
+  .contact-section--two-cols,
+  .footer {
+    position: relative !important;
+    z-index: 60 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  .footer { z-index: 70 !important; }
+}
+@media (min-width: 413px) and (max-width: 415px) {
+  .bg-wrap {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-height: 235vh !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+    z-index: 0 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+
+  .white-box {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    background-color: #fff !important;
+    z-index: 5 !important;
+    backface-visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .white-box.box-1 {
+    top: 55vh !important;
+    height: 48vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 184vh !important;
+    height: 30vh !important;
+  }
+
+  .logo-section,
+  .hero-wrapper,
+  .services-section,
+  .studio-section,
+  .about-section,
+  .portfolio-section,
+  .contact-section--two-cols,
+  .footer {
+    position: relative !important;
+    z-index: 60 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+  .footer { z-index: 70 !important; }
+}
+
+/* -----------------------
+   CASOS ESPECÍFICOS (389 - 391)
+   ----------------------- */
+@media (min-width: 389px) and (max-width: 391px) {
+  .bg-wrap {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-height: 232vh !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+    z-index: 0 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+
+  .white-box {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    background-color: #fff !important;
+    z-index: 5 !important;
+    backface-visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .white-box.box-1 {
+    top: 55vh !important;
+    height: 46vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 190vh !important;
+    height: 31vh !important;
+  }
+
+  .logo-section,
+  .hero-wrapper,
+  .services-section,
+  .studio-section,
+  .about-section,
+  .portfolio-section,
+  .contact-section--two-cols,
+  .footer {
+    position: relative !important;
+    z-index: 60 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+  .footer { z-index: 70 !important; }
+}
+
+/* -----------------------
+   CASOS ESPECÍFICOS (429 - 431)
+   ----------------------- */
+@media (min-width: 429px) and (max-width: 431px) {
+  .bg-wrap {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-height: 238vh !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+    z-index: 0 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+
+  .white-box {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    background-color: #fff !important;
+    z-index: 5 !important;
+    backface-visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .white-box.box-1 {
+    top: 57vh !important;
+    height: 50vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 188vh !important;
+    height: 32vh !important;
+  }
+
+  .logo-section,
+  .hero-wrapper,
+  .services-section,
+  .studio-section,
+  .about-section,
+  .portfolio-section,
+  .contact-section--two-cols,
+  .footer {
+    position: relative !important;
+    z-index: 60 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+  .footer { z-index: 70 !important; }
+}
+@media (min-width: 343px) and (max-width: 345px) {
+  .bg-wrap {
+    top: 0 !important;
+    min-height: 208vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+    transform: none !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    backface-visibility: hidden !important;
+    transform: translate(-50%, 0) !important;
+    position: absolute !important;
+    left: 50% !important;
+    width: 100vw !important;
+    background-color: #fff !important;
+  }
+
+  .white-box.box-1 {
+    top: 52.5vh !important;
+    height: 43vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 174vh !important;
+    height: 30vh !important;
+  }
+
+  .contact-section--two-cols,
+  .logo-section,
+  .hero-wrapper,
+  .services-section,
+  .studio-section,
+  .about-section,
+  .portfolio-section,
+  .footer {
+    position: relative !important;
+    z-index: 10 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    background: none;
+  }
+
+  .footer { z-index: 70 !important; }
+}
+
+.white-box,
+.bg-wrap {
+  overflow-x: hidden;
+  overflow-y: visible;
+}

@@ -1,5 +1,6 @@
-// src/componentes/StudioSection.tsx
+// src/componentes/Pagina1/StudioSection.tsx
 import React from "react";
+import "./StudioSection.css";
 
 interface StudioSectionProps {
   style?: React.CSSProperties;
@@ -9,31 +10,22 @@ const StudioSection: React.FC<StudioSectionProps> = ({ style }) => {
   return (
     <section
       id="studios"
-      className="w-full h-[727px] relative z-40"
+      className="studio-section"
       aria-label="Seção de Estúdios"
       style={style}
     >
-      <div className="max-w-[1000px] mx-auto flex flex-col items-center"> {/* Alterei de 1156px para 900px como exemplo */}
-        <div className="flex justify-between w-full mb-6">
-          <h2 className="text-4xl font-extrabold text-black">ESTÚDIOS</h2>
-          <a
-            href="#"
-            className="inline-flex items-center px-6 py-3 border border-black rounded text-sm font-medium text-black hover:bg-black hover:text-white transition-colors"
-          >
-            CONHEÇA AGORA
-          </a>
+      <div className="studio-container">
+        <div className="studio-header">
+          <h2>ESTÚDIOS</h2>
+          <a href="#">CONHEÇA AGORA</a>
         </div>
-        <div className="relative w-full h-[600px] bg-black rounded-lg overflow-hidden mb-6 border-2 border-white">
+        <div className="studio-video">
           <img
             src="/assets/studio-video-thumbnail.jpg"
             alt="Thumbnail do vídeo de estúdios"
-            className="w-full h-full object-cover filter brightness-50"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button
-              className="w-16 h-16 bg-white rounded-full flex items-center justify-center"
-              aria-label="Reproduzir vídeo"
-            >
+          <div className="overlay">
+            <button aria-label="Reproduzir vídeo">
               <svg
                 width="24"
                 height="24"

@@ -1,25 +1,25 @@
 // src/componentes/AboutSection.tsx
 import React from "react";
-import './AboutSection.css';
+import "./AboutSection.css";
 
 interface AboutSectionProps {
-  sectionWidth?: string;   // Controle da largura da seção 
-  sectionHeight?: string;  // Controle da altura da seção 
-  logoWidth?: string;      // Controle da largura da logo PDX 
-  logoHeight?: string;     // Controle da altura da logo PDX 
-  logoLeft?: string;       // Controle da posição horizontal da logo PDX 
-  logoTop?: string;        // Controle da posição vertical da logo PDX 
-  bigXWidth?: string;      // Controle da largura do X grande 
-  bigXHeight?: string;     // Controle da altura do X grande 
-  bigXRight?: string;      // Controle da posição horizontal do X grande 
-  bigXtop?: string;        // Controle da posição vertical do X grande 
-  titleWidth?: string;     // Controle da largura do título 
-  titleHeight?: string;    // Controle da altura do título 
-  titleLeft?: string;      // Controle da posição horizontal do título 
-  titleTop?: string;       // Controle da posição vertical do título 
-  textWidth?: string;      // Controle da largura do texto 
-  textLeft?: string;       // Controle da posição horizontal do texto 
-  textTop?: string;        // Controle da posição vertical do texto 
+  sectionWidth?: string;
+  sectionHeight?: string;
+  logoWidth?: string;
+  logoHeight?: string;
+  logoLeft?: string;
+  logoTop?: string;
+  bigXWidth?: string;
+  bigXHeight?: string;
+  bigXRight?: string;
+  bigXtop?: string;
+  titleWidth?: string;
+  titleHeight?: string;
+  titleLeft?: string;
+  titleTop?: string;
+  textWidth?: string;
+  textLeft?: string;
+  textTop?: string;
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({
@@ -44,51 +44,44 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   return (
     <section
       id="about"
-      className="relative bg-black z-30 overflow-hidden"
-      style={{ width: sectionWidth, height: sectionHeight, marginTop: "50px" }}
+      className="about-section"
+      style={{ width: sectionWidth, height: sectionHeight }}
       aria-label="Seção Sobre a PDX"
     >
-      {/* Logo PDX à esquerda */}
       <img
         src="/assets/logo-pdx.png"
         alt="PDX Studios Logo (ESTÚDIOS PDX)"
-        className="absolute"
+        className="about-logo"
         style={{
           left: logoLeft,
           top: logoTop,
           width: logoWidth,
           height: logoHeight,
-          objectFit: "contain",
         }}
         draggable={false}
       />
-      {/* X grande à direita, com overflow */}
       <img
         src="/assets/15. X do logo PDX.png"
         alt="X Grande PDX"
-        className="absolute"
+        className="about-big-x"
         style={{
           right: bigXRight,
           top: bigXtop,
           width: bigXWidth,
           height: bigXHeight,
-          objectFit: "cover",
-          clipPath: "inset(0 0 0 0)",
         }}
         draggable={false}
       />
-      {/* Título à esquerda */}
       <div
-        className="absolute text-white"
+        className="about-title"
         style={{
           left: titleLeft,
           top: titleTop,
           width: titleWidth,
           height: titleHeight,
-          overflow: "hidden",
         }}
       >
-        <h2 className="text-5xl font-extrabold leading-tight">
+        <h2>
           SOMOS UMA<br />
           EMPRESA QUE<br />
           TRANSFORMA<br />
@@ -96,22 +89,27 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           RESULTADOS
         </h2>
       </div>
-      {/* Texto abaixo do título */}
       <div
-        className="absolute text-white text-left text-content" // Adicionada classe para CSS
+        className="about-text"
         style={{
           left: textLeft,
           top: textTop,
           width: textWidth,
-          overflow: "auto",
         }}
       >
-        <p className="leading-relaxed">
-          <strong>conectamos marcas e pessoas através de estratégias inovadoras<br />
-          e eficazes. Seja por meio de marketing digital, marketing de conteúdo<br />
-          ou estratégias offline, entendemos que o marketing é a chave para o<br />
-          sucesso do negócio que queira se destacar e crescer no mercado<br />
-          competitivo de hoje.</strong>
+        <p>
+          <strong>
+            conectamos marcas e pessoas através de estratégias inovadoras
+            <br />
+            e eficazes. Seja por meio de marketing digital, marketing de
+            conteúdo
+            <br />
+            ou estratégias offline, entendemos que o marketing é a chave para o
+            <br />
+            sucesso do negócio que queira se destacar e crescer no mercado
+            <br />
+            competitivo de hoje.
+          </strong>
         </p>
       </div>
     </section>

@@ -1,6 +1,6 @@
-// src/componentes/Header.tsx
+// src/componentes/Pagina1/Header.tsx
 import React, { useState } from "react";
-import "./Header.css"; // CSS para header fixo
+import "./Header.css";
 
 const navItems = [
   { label: "SERVIÇOS", href: "#services" },
@@ -15,77 +15,44 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Header fixo, centralizado */}
       <header className="header">
         <div className="header-container">
-          {/* Logo (já preparado para imagem real) */}
           <div className="logo">
-            <img
-              src="/assets/logo-pdx.png"
-              alt="PDX Logo"
-              className="h-10 w-auto"
-            />
+            <img src="/assets/logo-pdx.png" alt="PDX Logo" />
           </div>
-
-          {/* Menu centralizado */}
-          <nav className="hidden lg:flex nav-center">
+          <nav className="nav-center" aria-label="Main navigation">
             {navItems.map((item) => (
               <a key={item.label} href={item.href}>
                 {item.label}
               </a>
             ))}
           </nav>
-
-          {/* Botão "ÁREA DO CLIENTE" (igual ao CONHEÇA AGORA) */}
-          <div className="hidden lg:flex">
+          <div className="client-area-wrap">
             <a href="#cliente" className="btn-cliente">
               ÁREA DO CLIENTE
             </a>
           </div>
-
-          {/* Botão hambúrguer (mobile) */}
           <button
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 border border-white/30 rounded"
+            className="btn-hamburger"
             aria-label="Abrir menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
+            type="button"
           >
-            <div className="space-y-1.5">
-              <span className="block w-5 h-0.5 bg-white"></span>
-              <span className="block w-5 h-0.5 bg-white"></span>
-              <span className="block w-5 h-0.5 bg-white"></span>
-            </div>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </header>
-
-      {/* Menu mobile drop-down */}
-      <div
-        className={`
-          lg:hidden fixed inset-x-0 z-40
-          flex justify-center
-          ${open ? "pointer-events-auto" : "pointer-events-none"}
-        `}
-        aria-hidden={!open}
-      >
-        <div
-          className={`
-            w-[calc(100%-2rem)] max-w-[1156px]
-            mt-[calc(38px+56px+8px)]
-            rounded-md border border-white/10
-            bg-black/90 backdrop-blur
-            px-4 py-3
-            transition-opacity
-            ${open ? "opacity-100" : "opacity-0"}
-          `}
-        >
-          <nav className="flex flex-col gap-3 text-sm text-white">
+      <div className="mobile-menu-container" aria-hidden={!open}>
+        <div className={`mobile-menu-box ${open ? "open" : ""}`}>
+          <nav className="mobile-menu" aria-label="Mobile navigation">
             {[...navItems, { label: "ÁREA DO CLIENTE", href: "#cliente" }].map(
               (item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="py-1 border-b border-white/10 last:border-b-0"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
