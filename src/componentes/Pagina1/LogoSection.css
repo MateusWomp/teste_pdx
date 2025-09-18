@@ -53,7 +53,7 @@
     top: 90%;
   }
   .logo-item {
-    --logo-item-height: 4vh;
+    --logo-item-height: 3vh;
     margin-right: 8%;
   }
 }

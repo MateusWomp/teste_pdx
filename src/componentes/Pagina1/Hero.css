@@ -338,21 +338,23 @@
   /* controla apenas o container do banner e a própria imagem */
   .hero-banner {
     left: -1% !important;
-    top: 25% !important;
-    width:46.159420% !important;
-    height: 62% !important;
+    top: 29% !important;
+    width: 48.159420% !important;
+    height: 59% !important;
   }
 
   .hero-banner-inner {
-    width: 100% !important;
-    height: 100% !important;
+    width: 115% !important;
+    height: 115% !important;
     background-color: rgba(243, 244, 246, 0.2) !important;
     border-radius: 0.375rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
-
+  .hero-inner{
+    height: 95%;
+  }
   .hero-banner-inner img {
     width: 100% !important;
     height: 100% !important;

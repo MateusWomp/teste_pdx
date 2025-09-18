@@ -3,7 +3,7 @@
   position: relative;
   background-color: black;
   z-index: 30;
-  overflow: hidden; 
+  overflow: hidden; /* importante: recorta qualquer parte da imagem que saia da seção */
   margin-top: 50px;
 }
 
@@ -66,15 +66,15 @@
   /* garantir que a seção fique acima das faixas de background */
   #about.about-section,
   .about-section {
-    width: 72vw !important;
+    width: 82vw !important;
     height: auto !important;
-    min-height: 35vh !important;
+    height: 35vh !important;
+    min-width: 40vh;
     overflow: visible !important; /* permite rolagem vertical normal */
     position: relative !important;
     z-index: 40 !important; /* > white-box no mobile */
     background-color: black !important;
   }
-.about-section { --big-x-visible: 50vw; } 
   .about-logo {
     left: 4vw !important;
     top: 1vh !important;
@@ -83,9 +83,9 @@
   }
 
   .about-big-x {
-    right: -8;
+    left: 52.9%;
     top: -3vh !important;
-    width: 68vw !important;
+    width: 56vw !important;
     height: auto !important;
     object-fit: contain !important;
   }
@@ -130,9 +130,9 @@
   }
 
   .about-big-x {
-    right: -10vw !important;
+    right: -0.1% !important;
     top: 20vh !important;
-    width: 70vw !important;
+    width: 56vw !important;
     height: auto !important;
     object-fit: contain !important;
   }
@@ -272,9 +272,9 @@
   }
 
   .about-big-x {
-    right: -8vw !important;
+    right: 0.10% !important;
     top: 5vh !important;
-    width: 68vw !important;
+    width: 54% !important;
     height: auto !important;
     object-fit: contain !important;
   }
@@ -319,9 +319,9 @@
   }
 
   .about-big-x {
-    right: -8vw !important;
+    right: 1% !important;
     top: 5vh !important;
-    width: 68vw !important;
+    width: 54% !important;
     height: auto !important;
     object-fit: contain !important;
   }
@@ -362,9 +362,9 @@
   }
 
   .about-big-x {
-    right: -10vw !important;
+    right: 1% !important;
     top: 5vh !important;
-    width: 70vw !important;
+    width: 54% !important;
     height: auto !important;
     object-fit: contain !important;
   }
@@ -412,11 +412,9 @@
   }
 
   .about-big-x {
-    right: -8vw !important;
+    right: 1vw !important;
     top: 5vh !important;
-    width: 68vw !important;
-    height: auto !important;
-    object-fit: contain !important;
+    width: 55vw !important;
   }
 
   .about-title {
@@ -435,6 +433,56 @@
   .about-text {
     left: 4vw !important;
     top: 30vh !important;
+    width: 68vw !important;
+    height: auto !important;
+    font-size: 1.2vw !important;
+  }
+  .about-text p { line-height: 1.55 !important; }
+}
+@media(min-width: 343px) and (max-width: 345px){
+  /* garantir que a seção fique acima das faixas de background */
+  #about.about-section,
+  .about-section {
+    width: 82vw !important;
+    height: auto !important;
+    height: 35vh !important;
+    min-width: 40vh;
+    overflow: visible !important; /* permite rolagem vertical normal */
+    position: relative !important;
+    z-index: 40 !important; /* > white-box no mobile */
+    background-color: black !important;
+  }
+  .about-logo {
+    left: 4vw !important;
+    top: 1vh !important;
+    width: 30vw !important;
+    height: auto !important;
+  }
+
+  .about-big-x {
+    left: 18vh;
+    top: -3vh !important;
+    width: 55vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .about-title {
+    left: 4vw !important;
+    top: 8vh !important;
+    width: 54% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .about-title h2 {
+    font-size: 6vw !important;
+    line-height: 1.02 !important;
+    margin: 0 !important;
+  }
+
+  .about-text {
+    left: 4vw !important;
+    top: 21vh !important;
     width: 68vw !important;
     height: auto !important;
     font-size: 1.2vw !important;
