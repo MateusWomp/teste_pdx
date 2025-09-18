@@ -138,7 +138,7 @@
   }
 
   .studio-header {
-    --studio-header-offset: -50%;
+    --studio-header-offset: -45%;
     --studio-title-offset: 7vh;
     --studio-button-offset: 7vh;
 
@@ -184,7 +184,7 @@
 
   .studio-video {
     height: 30vh;
-    width: 50vh;
+    width: 90%;
     margin-top: 10%;
     border-radius: 2vw;
     border-width: 0.5vw;

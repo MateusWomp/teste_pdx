@@ -49,11 +49,11 @@
 /* ----- MOBILE (361px a 480px) - regra original adaptada para intervalo ----- */
 @media (min-width: 361px) and (max-width: 480px) {
   .logo-section {
-    height: 7vh;
+    height: 3vh;
     top: 91%;
   }
   .logo-item {
-    --logo-item-height: 3vh;
+    --logo-item-height: 2.5vh;
     margin-right: 8%;
   }
 }

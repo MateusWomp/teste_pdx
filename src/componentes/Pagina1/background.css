@@ -92,12 +92,12 @@
   }
 
   .white-box.box-1 {
-    top: 60vh !important;
-    height: 56vh !important;
+    top: 27% !important;
+    height: 28% !important;
   }
 
   .white-box.box-2 {
-    top: 224vh !important;
+    top: 100% !important;
     height: 30vh !important;
   }
 
