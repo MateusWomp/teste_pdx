@@ -50,10 +50,10 @@
 @media (min-width: 361px) and (max-width: 480px) {
   .logo-section {
     height: 3vh;
-    top: 91%;
+    top: 96%;
   }
   .logo-item {
-    --logo-item-height: 2.5vh;
+    --logo-item-height: 3vh;
     margin-right: 8%;
   }
 }
