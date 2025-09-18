@@ -93,3 +93,17 @@
     margin-right: 8%;
   }
 }
+@media (min-width: 413px) and (max-width: 415px){
+     .logo-section {
+    height: 6%;
+    margin-top: 15%;             /* deslocamento mais baixo para alinhar com seções reduzidas */
+    transform: translateY(-50%);
+    overflow: hidden;
+    z-index: 50;
+  }
+
+  .logo-item {
+    --logo-item-height: 3vh;  /* ícones um pouco menores para caber melhor */
+    margin-right: 8%;
+  }
+}

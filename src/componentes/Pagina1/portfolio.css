@@ -307,7 +307,7 @@
   .portfolio-section {
     padding-left: 5%;
     padding-right: 5%;
-    margin-top: 1vh !important; /* ajuste mais suave que o de 480px */
+    margin-top: 15% !important; 
   }
 
   .portfolio-header h2 {
