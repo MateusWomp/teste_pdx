@@ -432,7 +432,7 @@
 }
 @media (min-width: 389px) and (max-width: 391px){
   .studio-header {
-    --studio-header-offset: -77%;
+    --studio-header-offset: -65%;
     --studio-title-offset: 5vh;
     --studio-button-offset: 5vh;
 
@@ -477,8 +477,8 @@
   }
 
   .studio-video {
-    height: 28vh;
-    width: 41vh;
+    height: 23vh;
+    width: 90%;
     margin-top: 8%;
     border-radius: 2vw;
     border-width: 0.45vw;

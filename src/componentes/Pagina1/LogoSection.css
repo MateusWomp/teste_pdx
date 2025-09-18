@@ -107,3 +107,17 @@
     margin-right: 8%;
   }
 }
+@media (min-width: 389px) and (max-width: 391px){
+    .logo-section {
+    height: 0%;
+    margin-top: 15%;             /* deslocamento mais baixo para alinhar com seções reduzidas */
+    transform: translateY(-50%);
+    overflow: hidden;
+    z-index: 50;
+  }
+
+  .logo-item {
+    --logo-item-height: 3vh;  /* ícones um pouco menores para caber melhor */
+    margin-right: 8%;
+  }
+}

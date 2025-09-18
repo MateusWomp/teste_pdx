@@ -349,21 +349,21 @@
 @media (min-width: 389px) and (max-width: 391px){
   #about.about-section {
     width: 100vw !important;
-    height: auto !important;
+  
     min-height: 40vh !important;
     overflow: visible !important;
   }
 
   .about-logo {
     left: 4vw !important;
-    top: 8vh !important;
+    top: 18% !important;
     width: 28vw !important;
     height: auto !important;
   }
 
   .about-big-x {
     right: 1% !important;
-    top: 5vh !important;
+    top: 12% !important;
     width: 54% !important;
     height: auto !important;
     object-fit: contain !important;
@@ -371,7 +371,7 @@
 
   .about-title {
     left: 4vw !important;
-    top: 15vh !important;
+    top: 35% !important;
     width: 52vw !important;
     height: auto !important;
     overflow: visible !important;
@@ -384,7 +384,7 @@
 
   .about-text {
     left: 4vw !important;
-    top: 30vh !important;
+    top: 71% !important;
     width: 68vw !important;
     height: auto !important;
     font-size: 1.2vw !important;
