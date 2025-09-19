@@ -251,7 +251,6 @@
   }
 }
 @media (min-width: 410px) and (max-width: 412px) {
-  /* controla apenas o container do banner e a própria imagem */
   .hero-banner {
     left: -1% !important;
     top: 25% !important;
