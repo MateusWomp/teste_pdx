@@ -319,7 +319,7 @@
   }
 
   .white-box.box-2 {
-    top: 79% !important;
+    top: 80% !important;
     height: 31vh !important;
   }
 
@@ -338,10 +338,6 @@
   }
   .footer { z-index: 70 !important; }
 }
-
-/* -----------------------
-   CASOS ESPECÍFICOS (429 - 431)
-   ----------------------- */
 @media (min-width: 429px) and (max-width: 431px) {
   .bg-wrap {
     position: absolute !important;
