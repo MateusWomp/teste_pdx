@@ -330,7 +330,7 @@
 
   .studio-video {
     height: 28vh !important;
-    width: 40vh !important;
+    width: 100% !important;
     margin-top: 8% !important;
     border-radius: 2vw !important;
     border-width: 0.45vw !important;

@@ -266,14 +266,14 @@
 
   .about-logo {
     left: 4vw !important;
-    top: 8vh !important;
+    top: 42% !important;
     width: 30vw !important;
     height: auto !important;
   }
 
   .about-big-x {
     right: 0.10% !important;
-    top: 5vh !important;
+    top: 35% !important;
     width: 54% !important;
     height: auto !important;
     object-fit: contain !important;
@@ -281,7 +281,7 @@
 
   .about-title {
     left: 4vw !important;
-    top: 15vh !important;
+    top: 60% !important;
     width: 54vw !important;
     height: auto !important;
     overflow: visible !important;
@@ -292,7 +292,7 @@
   }
   .about-text {
     left: 4vw !important;
-    top: 30vh !important;
+    top: 110% !important;
     width: 68vw !important;
     font-size: 1.5vw !important;
   }
