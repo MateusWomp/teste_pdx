@@ -284,7 +284,7 @@
 }
 @media (min-width: 410px) and (max-width: 412px) {
   .studio-header {
-    --studio-header-offset: -74%;
+    --studio-header-offset: -55%;
     --studio-title-offset: 5vh;
     --studio-button-offset: 5vh;
 
