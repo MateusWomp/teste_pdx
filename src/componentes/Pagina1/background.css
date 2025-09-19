@@ -107,10 +107,6 @@
     background: white !important;
   }
 }
-
-/* -----------------------
-   PHABLET / SMALL (481px - 768px)
-   ----------------------- */
 @media (min-width: 481px) and (max-width: 768px) {
   .bg-wrap {
     top: 0 !important;
@@ -215,7 +211,7 @@
 
   .white-box.box-2 {
     top: 85% !important;
-    height: 32vh !important;
+    height: 33vh !important;
   }
 
   .logo-section,
