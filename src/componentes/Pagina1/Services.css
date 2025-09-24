@@ -373,3 +373,45 @@
   }
   .service-arrow img { width: 100%; height: auto; }
 }
+@media (min-width: 911px) and (max-width: 913px){
+  .services-section {
+    padding-top: 63%;
+    padding-bottom: -10%;
+  }
+
+  .services-grid {
+    width: 90%;
+    gap: 3.5%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 55.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4%;
+    right: 4%;
+    top: 9%;
+    font-size: 95%; 
+  }
+
+  .service-desc {
+    left: 4%;
+    right: 4%;
+    top: 24%;
+    font-size: 85%; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
