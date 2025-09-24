@@ -119,3 +119,54 @@
     font-size: 1.5vw; 
   }
 }
+@media (min-width: 539px) and (max-width: 541px){
+  .footer {
+  background-color: black;
+  color: white;
+  padding: 3.95%;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 21.4%;
+  height: auto;
+  margin-bottom: 1.6%;
+}
+
+.footer-phrase {
+  font-size: 150%; 
+  margin-bottom: 2.9%;
+  font-weight: 800;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.9%;
+}
+
+.footer-links a {
+  margin-top: 13.6%;
+  font-size: 0.88rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #aaa;
+}
+
+.footer-copyright {
+  font-size: 0.88rem;
+}
+}

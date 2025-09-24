@@ -59,12 +59,13 @@
 }
 
 /* ----- TABLET (769px a 1024px) ----- */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .logo-section {
-    height: 13.5vh;
+    height: 9vh;
+    top: 98vh;
   }
   .logo-item {
-    --logo-item-height: 7vh;
+    --logo-item-height: 6vh;
     margin-right: 4%;
   }
 }
@@ -90,6 +91,16 @@
 
   .logo-item {
     --logo-item-height: 3vh;  /* ícones um pouco menores para caber melhor */
+    margin-right: 8%;
+  }
+}
+@media (min-width: 539px) and (max-width: 541px){
+    .logo-section {
+    height: 6%;
+    top: 100%;
+  }
+  .logo-item {
+    --logo-item-height: 5vh;
     margin-right: 8%;
   }
 }
@@ -133,5 +144,15 @@
   .logo-item {
     --logo-item-height: 3vh;  /* ícones um pouco menores para caber melhor */
     margin-right: 8%;
+  }
+}
+@media (width: 1024px) and (height: 600px) and (orientation: landscape){
+    .logo-section {
+    height: 9vh;
+    top: 198vh;
+  }
+  .logo-item {
+    --logo-item-height: 9vh;
+    margin-right: 4%;
   }
 }

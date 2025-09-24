@@ -197,28 +197,28 @@
 }
 
 /* ----- TABLET (769px a 1024px) ----- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .studio-section {
-    margin-top: 17vh;
-    height: 66vh;
-  }
+@media (min-width: 768px) and (max-width: 1024px) {
 
   .studio-header {
-    margin-bottom: 2.5vh;
+    --studio-header-offset: -10vh;
+    --studio-title-offset: 7vh;
+    --studio-button-offset: 7vh;
+
+    margin-top: var(--studio-header-offset);
+    margin-bottom: 3vh;
     flex-direction: row;
     gap: 0;
     align-items: center;
     justify-content: flex-start;
-    --studio-title-offset-left: 0%;
-    --studio-button-offset-left: 5%;
-    --studio-title-width: 60%;
+
+    --studio-title-offset-left: 2vh;
+    --studio-button-offset-left: 10%;
+    --studio-title-width: 55%;
     --studio-button-width: auto;
-    --studio-title-font-size: 1.8vw;
-    --studio-button-font-size: 1.2vw;
-    --studio-button-padding-vertical: 1.2vh;
-    --studio-button-padding-horizontal: 1.8vw;
-    --studio-title-offset: 0vh;
-    --studio-button-offset: 0vh;
+    --studio-title-font-size: 4vh;
+    --studio-button-font-size: 2vw;
+    --studio-button-padding-vertical: 1.5vh;
+    --studio-button-padding-horizontal: 4vw;
   }
 
   .studio-header h2 {
@@ -239,23 +239,224 @@
     width: var(--studio-button-width);
     font-size: var(--studio-button-font-size);
     padding: var(--studio-button-padding-vertical) var(--studio-button-padding-horizontal);
-    border-width: 0.1vw;
-    border-radius: 0.5vw;
+    border-width: 0.4vw;
+    border-radius: 1.5vw;
     box-sizing: border-box;
   }
 
   .studio-video {
-    height: 55vh;
-    border-radius: 0.8vw;
-    border-width: 0.2vw;
+    height: 40vh;
+    width: 93%;
+    margin-top: 10%;
+    border-radius: 2vw;
+    border-width: 0.5vw;
   }
 
   .studio-video button {
-    width: 6vw;
-    height: 6vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  }
+  @media (min-width: 819px) and (max-width: 821px){
+    .studio-header {
+    --studio-header-offset: -10vh;
+    --studio-title-offset: 7vh;
+    --studio-button-offset: 7vh;
+
+    margin-top: var(--studio-header-offset);
+    margin-bottom: 3vh;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+
+    --studio-title-offset-left: 2vh;
+    --studio-button-offset-left: 10%;
+    --studio-title-width: 55%;
+    --studio-button-width: auto;
+    --studio-title-font-size: 4vh;
+    --studio-button-font-size: 2vw;
+    --studio-button-padding-vertical: 1.5vh;
+    --studio-button-padding-horizontal: 4vw;
+  }
+
+  .studio-header h2 {
+    position: relative;
+    top: var(--studio-title-offset);
+    margin-left: var(--studio-title-offset-left);
+    width: var(--studio-title-width);
+    font-size: var(--studio-title-font-size);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .studio-header a {
+    position: relative;
+    top: var(--studio-button-offset);
+    margin-left: var(--studio-button-offset-left);
+    width: var(--studio-button-width);
+    font-size: var(--studio-button-font-size);
+    padding: var(--studio-button-padding-vertical) var(--studio-button-padding-horizontal);
+    border-width: 0.4vw;
+    border-radius: 1.5vw;
+    box-sizing: border-box;
+  }
+
+  .studio-video {
+    height: 40vh;
+    width: 93%;
+    margin-top: 10%;
+    border-radius: 2vw;
+    border-width: 0.5vw;
+  }
+
+  .studio-video button {
+    width: 10vw;
+    height: 10vw;
+  }
+  }
+  @media (min-width: 852px) and (max-width: 854px){
+    .studio-header {
+    --studio-header-offset: -6vh;
+    --studio-title-offset: 7vh;
+    --studio-button-offset: 7vh;
+
+    margin-top: var(--studio-header-offset);
+    margin-bottom: 3vh;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+
+    --studio-title-offset-left: 2vh;
+    --studio-button-offset-left: 10%;
+    --studio-title-width: 55%;
+    --studio-button-width: auto;
+    --studio-title-font-size: 4vh;
+    --studio-button-font-size: 2vw;
+    --studio-button-padding-vertical: 1.5vh;
+    --studio-button-padding-horizontal: 4vw;
+  }
+
+  .studio-header h2 {
+    position: relative;
+    top: var(--studio-title-offset);
+    margin-left: var(--studio-title-offset-left);
+    width: var(--studio-title-width);
+    font-size: var(--studio-title-font-size);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .studio-header a {
+    position: relative;
+    top: var(--studio-button-offset);
+    margin-left: var(--studio-button-offset-left);
+    width: var(--studio-button-width);
+    font-size: var(--studio-button-font-size);
+    padding: var(--studio-button-padding-vertical) var(--studio-button-padding-horizontal);
+    border-width: 0.4vw;
+    border-radius: 1.5vw;
+    box-sizing: border-box;
+  }
+
+  .studio-video {
+    height: 40vh;
+    width: 93%;
+    margin-top: 10%;
+    border-radius: 2vw;
+    border-width: 0.5vw;
+  }
+
+  .studio-video button {
+    width: 10vw;
+    height: 10vw;
+  }
+  }
+  @media (min-width: 911px) and (max-width: 1024px){
+         .studio-header {
+    --studio-header-offset: -9vh;
+    --studio-title-offset: 7vh;
+    --studio-button-offset: 7vh;
+
+    margin-top: var(--studio-header-offset);
+    margin-bottom: 3vh;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+
+    --studio-title-offset-left: 2vh;
+    --studio-button-offset-left: 10%;
+    --studio-title-width: 55%;
+    --studio-button-width: auto;
+    --studio-title-font-size: 4vh;
+    --studio-button-font-size: 2vw;
+    --studio-button-padding-vertical: 1.5vh;
+    --studio-button-padding-horizontal: 4vw;
+  }
+  }
+@media (min-width: 539px) and (max-width: 541px){
+  .studio-header {
+    --studio-header-offset: -35%;
+    --studio-title-offset: 7vh;
+    --studio-button-offset: 7vh;
+
+    margin-top: var(--studio-header-offset);
+    margin-bottom: 3vh;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+
+    --studio-title-offset-left: 2vh;
+    --studio-button-offset-left: 10%;
+    --studio-title-width: 55%;
+    --studio-button-width: auto;
+    --studio-title-font-size: 4vh;
+    --studio-button-font-size: 2vw;
+    --studio-button-padding-vertical: 1.5vh;
+    --studio-button-padding-horizontal: 4vw;
+  }
+
+  .studio-header h2 {
+    position: relative;
+    top: var(--studio-title-offset);
+    margin-left: var(--studio-title-offset-left);
+    width: var(--studio-title-width);
+    font-size: var(--studio-title-font-size);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .studio-header a {
+    position: relative;
+    top: var(--studio-button-offset);
+    margin-left: var(--studio-button-offset-left);
+    width: var(--studio-button-width);
+    font-size: var(--studio-button-font-size);
+    padding: var(--studio-button-padding-vertical) var(--studio-button-padding-horizontal);
+    border-width: 0.4vw;
+    border-radius: 1.5vw;
+    box-sizing: border-box;
+  }
+
+  .studio-video {
+    height: 40vh;
+    width: 93%;
+    margin-top: 10%;
+    border-radius: 2vw;
+    border-width: 0.5vw;
+  }
+
+  .studio-video button {
+    width: 10vw;
+    height: 10vw;
   }
 }
-
 /* ----- DESKTOP (>=1025px) ----- */
 @media (min-width: 1025px) {
   .studio-section {
@@ -614,6 +815,65 @@
   .studio-video {
     height: 25vh;
     width: 35vh;
+    margin-top: 8%;
+    border-radius: 2vw;
+    border-width: 0.45vw;
+  }
+
+  .studio-video button {
+    width: 9.5vw;
+    height: 9.5vw;
+  }
+}
+@media (width: 1024px) and (height: 600px) and (orientation: landscape){
+  .studio-header {
+    --studio-header-offset: 0%;
+    --studio-title-offset: 5vh;
+    --studio-button-offset: 5vh;
+
+    margin-top: var(--studio-header-offset);
+    margin-bottom: 2.5vh;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start;
+
+    --studio-title-offset-left: 3%;
+    --studio-button-offset-left: 11%;
+    --studio-title-width: 60%;
+    --studio-button-width: auto;
+    --studio-title-font-size: 190%;
+    --studio-button-font-size: 120%;
+    --studio-button-padding-vertical: 1.2vh;
+    --studio-button-padding-horizontal: 2vw;
+  }
+
+  .studio-header h2 {
+    position: relative;
+    top: var(--studio-title-offset);
+    margin-left: var(--studio-title-offset-left);
+    width: var(--studio-title-width);
+    font-size: var(--studio-title-font-size);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .studio-header a {
+    position: relative;
+    top: var(--studio-button-offset);
+    margin-left: var(--studio-button-offset-left);
+    width: var(--studio-button-width);
+    font-size: var(--studio-button-font-size);
+    padding: var(--studio-button-padding-vertical) var(--studio-button-padding-horizontal);
+    border-width: 0.35vw;
+    border-radius: 1.2vw;
+    box-sizing: border-box;
+  }
+
+  .studio-video {
+    height: 80vh;
+    width: 95%;
     margin-top: 8%;
     border-radius: 2vw;
     border-width: 0.45vw;

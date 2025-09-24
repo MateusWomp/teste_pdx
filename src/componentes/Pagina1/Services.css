@@ -164,22 +164,24 @@
 
   /* opcional: se quiser cards um pouco maiores ao arrastar, poderia mudar algo aqui */
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .services-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 42vh;
+    padding-bottom: -10%;
   }
 
   .services-grid {
-    width: 90%;
-    max-width: 90%;
-    gap: 2.076124567474048442906574394463667820069%;
+    width: 64vh;
+    gap: 3.5%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
   }
 
   .service-card {
     flex-basis: 30.96885813148788927335640138408304498270%;
     width: 30.96885813148788927335640138408304498270%;
-    padding-bottom: 135.7541899441340782122905027932960893855%;
+    padding-bottom: 55.7541899441340782122905027932960893855%;
     margin: 0;
   }
 
@@ -187,14 +189,141 @@
     left: 4.469273743016759776536312849162011173184%;
     right: 4.469273743016759776536312849162011173184%;
     top: 9%;
-    font-size: 1.953125000000000000000000000000000000000vw;
+    font-size: 85%; 
   }
 
   .service-desc {
-    left: 4.469273743016759776536312849162011173184%;
+    left: 4%;
     right: 4.469273743016759776536312849162011173184%;
     top: 24%;
-    font-size: 1.367187500000000000000000000000000000000vw; 
+    font-size: 0.8rem; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
+@media (width: 1024px) and (height: 600px) and (orientation: landscape) {
+   .services-section {
+    padding-top: 53.5%;
+    padding-bottom: -10%;
+  }
+
+  .services-grid {
+    width: 84%;
+    gap: 3.5%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30%;
+    padding-bottom: 45%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4.469273743016759776536312849162011173184%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 9%;
+    font-size: 85%; 
+  }
+
+  .service-desc {
+    left: 4%;
+    right: 4.469273743016759776536312849162011173184%;
+    top: 24%;
+    font-size: 0.8rem; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
+
+@media (min-width: 539px) and (max-width: 541px){
+  .services-section {
+    padding-top: 55%;
+    padding-bottom: -10%;
+  }
+
+  .services-grid {
+    width: 64vh;
+    gap: 3.5%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 55.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4%;
+    right: 4%;
+    top: 9%;
+    font-size: 65%; 
+  }
+
+  .service-desc {
+    left: 4%;
+    right: 4%;
+    top: 24%;
+    font-size: 55%; 
+    margin-top: 0.5rem;
+  }
+
+  .service-arrow {
+    top: 69%;
+    width: 14.52513966480446927374301675977653631285%;
+  }
+  .service-arrow img { width: 100%; height: auto; }
+}
+@media (min-width: 852px) and (max-width: 854px){
+  .services-section {
+    padding-top: 63%;
+    padding-bottom: -10%;
+  }
+
+  .services-grid {
+    width: 90%;
+    gap: 3.5%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; 
+  }
+
+  .service-card {
+    flex-basis: 30.96885813148788927335640138408304498270%;
+    width: 30.96885813148788927335640138408304498270%;
+    padding-bottom: 55.7541899441340782122905027932960893855%;
+    margin: 0;
+  }
+
+  .service-title {
+    left: 4%;
+    right: 4%;
+    top: 9%;
+    font-size: 95%; 
+  }
+
+  .service-desc {
+    left: 4%;
+    right: 4%;
+    top: 24%;
+    font-size: 85%; 
     margin-top: 0.5rem;
   }
 

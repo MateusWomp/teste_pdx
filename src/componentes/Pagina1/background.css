@@ -107,7 +107,7 @@
     background: white !important;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 767px) {
   .bg-wrap {
     top: 0 !important;
     min-height: 200vh !important;
@@ -143,7 +143,7 @@
 /* -----------------------
    TABLET (769px - 1024px)
    ----------------------- */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .bg-wrap {
     top: 0 !important;
     min-height: 180vh !important;
@@ -160,13 +160,13 @@
   }
 
   .white-box.box-1 {
-    top: 44vh !important;
-    height: 22vh !important;
+    top: 60vh !important;
+    height: 75vh !important;
   }
 
   .white-box.box-2 {
-    top: 120vh !important;
-    height: 24vh !important;
+    top: 152% !important;
+    height: 27.4% !important;
   }
 
   .contact-section--two-cols {
@@ -176,6 +176,88 @@
   }
 }
 
+@media (min-width: 819px) and (max-width: 821px){
+   .bg-wrap {
+    top: 0 !important;
+    min-height: 180vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 0);
+  }
+
+  .white-box.box-1 {
+    top: 60vh !important;
+    height: 75vh !important;
+  }
+
+  .white-box.box-2 {
+    top: 148.1% !important;
+    height: 27.4% !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
+}
+@media (min-width: 852px) and (max-width: 854px){
+  .white-box.box-2 {
+    top: 146.6% !important;
+    height: 27% !important;
+  }
+}
+@media (min-width: 914px) and (max-width: 1024px){
+  .white-box.box-2 {
+    top: 148% !important;
+    height: 27.4% !important;
+  }
+}
+@media (min-width: 911px) and (max-width: 913px){
+.white-box.box-2 {
+    top: 146% !important;
+    height: 27% !important;
+  }
+}
+@media (min-width: 539px) and (max-width: 541px){
+    .bg-wrap {
+    top: 0 !important;
+    min-height: 200vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 0);
+  }
+
+  .white-box.box-1 {
+    top: 32% !important;
+    height: 35% !important;
+  }
+
+  .white-box.box-2 {
+    top: 136% !important;
+    height: 20.3% !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
+}
 /* -----------------------
    CASOS ESPECÍFICOS (410 - 412)
    ----------------------- */
@@ -438,4 +520,36 @@
 .bg-wrap {
   overflow-x: hidden;
   overflow-y: visible;
+}
+@media (width: 1024px) and (height: 600px) and (orientation: landscape){
+  .bg-wrap {
+    top: 0 !important;
+    min-height: 180vh !important;
+    overflow: visible !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-color: transparent !important;
+  }
+
+  .white-box {
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 0);
+  }
+
+  .white-box.box-1 {
+    top: 72% !important;
+    height: 85% !important;
+  }
+
+  .white-box.box-2 {
+    top: 337% !important;
+    height: 44% !important;
+  }
+
+  .contact-section--two-cols {
+    position: relative !important;
+    z-index: 10 !important;
+    background: white !important;
+  }
 }
