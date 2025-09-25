@@ -62,7 +62,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .logo-section {
     height: 9vh;
-    top: 98vh;
+    top: 94%;
   }
   .logo-item {
     --logo-item-height: 6vh;

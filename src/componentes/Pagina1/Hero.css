@@ -173,10 +173,10 @@
   }
 
   .hero-banner {
-    left: -15vh;
+    left: -15%;
     top: 0%;
     width: 64%;
-    height: 27vh;
+    height: 20vh;
   }
 
   .hero-title {
