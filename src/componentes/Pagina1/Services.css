@@ -171,7 +171,7 @@
   }
 
   .services-grid {
-    width: 75%;
+    width: 80%;
     gap: 3.5%;
     overflow-x: auto; 
     -webkit-overflow-scrolling: touch;
