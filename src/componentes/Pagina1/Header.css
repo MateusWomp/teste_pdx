@@ -214,7 +214,7 @@
     justify-content: var(--nav-justify, center); /* flex-start | center | flex-end */
     align-items: center;
     flex: 1 1 auto;
-    font-size: var(--nav-font-size, 0.65rem);
+    font-size: var(--nav-font-size, 0.75rem);
     font-weight: 700;
 
      margin-left: var(--nav-shift-x, -2%); 

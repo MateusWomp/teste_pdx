@@ -237,7 +237,7 @@
     height: auto !important;
   }
   .about-title h2 {
-    font-size: 5.2vw !important;
+    font-size: 250% !important;
     line-height: 1.06 !important;
     margin: 0 !important;
   }
@@ -247,7 +247,7 @@
     top: 36vh !important;
     width: 25vh !important;
     height: auto !important;
-    font-size: 0.9rem !important;
+    font-size: 87% !important;
     text-align: justify !important;
   }
   .about-text p { line-height: 1.6 !important; }
